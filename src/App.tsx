@@ -10,7 +10,7 @@ function App(): React.JSX.Element {
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload. I am exited to start software engineering
-                - Joven Mann
+                - Joven Mann Hello World
             </p>
         </div>
     );
