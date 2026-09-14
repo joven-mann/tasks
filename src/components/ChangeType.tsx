@@ -3,5 +3,21 @@ import { Button } from "react-bootstrap";
 import { QuestionType } from "../interfaces/question";
 
 export function ChangeType(): React.JSX.Element {
-    return <div>Change Type</div>;
+    const [value, setValue] = useState<QuestionType>("short_answer_question");
+
+    function change(): void {
+        setValue(
+            value === "multiple_choice_question" ?
+                "short_answer_question"
+            :   "multiple_choice_question",
+        );
+    }
+
+    return (
+        <div>
+            <Button onClick={change}>Change Type</Button>
+            {value === "multiple_choice_question" && <div>Multiple Choice</div>}
+            {value !== "multiple_choice_question" && <div>Short Answer</div>}
+        </div>
+    );
 }
